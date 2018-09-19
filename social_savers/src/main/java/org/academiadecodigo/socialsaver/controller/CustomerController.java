@@ -14,30 +14,27 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/customer")
 public class CustomerController {
 
-    private DonerService donerService;
+	private DonerService donerService;
 
-    @Autowired
-    public void setDonerService(DonerService donerService) {
-        this.donerService = donerService;
-    }
+	@Autowired
+	public void setDonerService(DonerService donerService) {
+		this.donerService = donerService;
+	}
 
-    @RequestMapping(method = RequestMethod.GET, value = "/{id}")
-    public String list(@PathVariable Integer id, Model model) {
-        //model.addAttribute("batata", donerService.get(id));
-        return "details";
-    }
+	@RequestMapping(method = RequestMethod.GET, value = "/{id}")
+	public String list(@PathVariable Integer id, Model model) {
+		//model.addAttribute("batata", donerService.get(id));
+		return "details";
+	}
 
-    @RequestMapping(method = RequestMethod.GET, value = "/add")
-    public String add(Model model) {
-        model.addAttribute("customer", new Doner());
-        return "donater_reg";
-    }
+	@RequestMapping(method = RequestMethod.GET, value = "/add")
+	public String add(Model model) {
+		model.addAttribute("customer", new Doner());
+		return "donater_reg";
+	}
 
-    @RequestMapping(method = RequestMethod.POST, value = "")
-    public String createCustomer(@ModelAttribute("customer") Doner customer) {
-
-
-        return "redirect:/customer/1";
-    }
-
+	@RequestMapping(method = RequestMethod.POST, value = "")
+	public String createCustomer(@ModelAttribute("customer") Doner customer) {
+		return "redirect:/customer/1";
+	}
 }

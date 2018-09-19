@@ -1,6 +1,5 @@
 package org.academiadecodigo.socialsaver.factories;
 
-
 import org.academiadecodigo.socialsaver.persistence.model.Entity.Doner;
 
 /**
@@ -8,11 +7,10 @@ import org.academiadecodigo.socialsaver.persistence.model.Entity.Doner;
  */
 public class DonerFactory {
 
+	public Doner createAccount() {
 
-    public Doner createAccount() {
+		Doner newDoner = new Doner();
 
-        Doner newDoner= new Doner();
-
-        return newDoner;
-    }
+		return newDoner;
+	}
 }

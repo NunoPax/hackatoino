@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
        profile="dev">
 
     <!-- Enable support for JPA annotations -->
@@ -30,7 +30,7 @@
         <property name="jpaProperties">
             <map>
                 <entry key="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
-                <entry key="hibernate.show_sql" value="${dev.debug}" />
+                <entry key="hibernate.show_sql" value="${dev.debug}"/>
                 <entry key="hibernate.hbm2ddl.auto" value="${dev.schema.auto}"/>
 
                 <!-- Insert test data if dev.schema.auto property set to create -->

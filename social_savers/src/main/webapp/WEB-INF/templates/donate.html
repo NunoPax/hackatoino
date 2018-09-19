@@ -1,71 +1,73 @@
 <!DOCTYPE html>
-<html lang=“en” xmlns:th=“http://www.thymeleaf.org“>
+<html lang="“en”">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" width="device-width" initial-scale="1"/>
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8"/>
-    <title>Login</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
-          integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
-            integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-            crossorigin="anonymous"></script>
-    <style>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" width="device-width" initial-scale="1"/>
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta http-equiv="Content-Type" content="text/html;" charset="utf-8"/>
+	<title>Login</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+			integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+			integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+			crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+			integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+			crossorigin="anonymous"></script>
+	<style>
 
-        .Body_Container {
-            width: 100vw;
-            height: 95vh;
-            background-color: rgba(19, 184, 215, 0.6);
-            margin: .5em;
-            background: url("assets/background.jpg");
-            background-size: cover;
-            background-position: center;
-        }
+		.Body_Container {
+			width: 100vw;
+			height: 95vh;
+			background-color: rgba(19, 184, 215, 0.6);
+			margin: .5em;
+			background: url("assets/background.jpg");
+			background-size: cover;
+			background-position: center;
+		}
 
-        div.card {
+		div.card {
 
-            display: inline-flex;
-            width: 250px;
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            text-align: center;
-        }
+			display: inline-flex;
+			width: 250px;
+			background-color: rgba(255, 255, 255, 0.9);
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			text-align: center;
+		}
 
+		input {
+			border: 10px;
+			padding: 10px;
+			font-size: 18px;
+		}
 
-        input {
-            border: 10px;
-            padding: 10px;
-            font-size: 18px;
-        }
+		input[type="submit"] {
+			background: grey;
+			color: white;
+		}
 
-        input[type="submit"] {
-            background: grey;
-            color: white;
-        }
-        #happy-panel{
-            size: 40vw;
-            padding: 3vw;
-            background: rgba(200,200,200,.6);
-            font-size: 2em;
-            text-align: center;
-        }
-    </style>
+		#happy-panel {
+			size: 40vw;
+			padding: 3vw;
+			background: rgba(200, 200, 200, .6);
+			font-size: 2em;
+			text-align: center;
+		}
+	</style>
 
 </head>
 <body class="Body_Container">
-<div id = "logo"><img src="assets/LogoRaDar.png" width="400"/></div>
-<div id ="happy-panel" >
-    <p>Obrigado pela sua doação, volte a ajudar!</p>
-    <p>Será contactato em breve pela instituição.</p>
-    <a href="Main.html"><button>voltar</button></a>
+<div id="logo"><img src="assets/LogoRaDar.png" width="400"/></div>
+<div id="happy-panel">
+	<p>Obrigado pela sua doação, volte a ajudar!</p>
+	<p>Será contactato em breve pela instituição.</p>
+	<a href="Main.html">
+		<button>voltar</button>
+	</a>
 </div>
 </body>
 </html>

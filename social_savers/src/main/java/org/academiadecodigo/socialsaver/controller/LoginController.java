@@ -8,39 +8,36 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.persistence.ManyToOne;
 
 @Controller
 public class LoginController {
 
-    private DonerService donerService;
+	private DonerService donerService;
 
-    @Autowired
-    public void setDonerService(DonerService donerService) {
-        this.donerService = donerService;
-    }
+	@Autowired
+	public void setDonerService(DonerService donerService) {
+		this.donerService = donerService;
+	}
 
-    @RequestMapping(method = RequestMethod.GET, value = {"/login","/",""})
-    public String root(Model model) {
-        model.addAttribute("loginForm", new LoginForm());
-        return "login";
-    }
+	@RequestMapping(method = RequestMethod.GET, value = {"/login", "/", ""})
+	public String root(Model model) {
+		model.addAttribute("loginForm", new LoginForm());
+		return "login";
+	}
 
-    @RequestMapping(method = RequestMethod.POST, value = "/login")
-    public String login(@ModelAttribute LoginForm loginForm){
-        if(donerService.login(loginForm.getName(),loginForm.getPassword())){
-            return "Main";
-        }
-        return "failedLogin";
-    }
+	@RequestMapping(method = RequestMethod.POST, value = "/login")
+	public String login(@ModelAttribute LoginForm loginForm) {
+		if (donerService.login(loginForm.getName(), loginForm.getPassword())) {
+			return "Main";
+		}
+		return "failedLogin";
+	}
 
-    @RequestMapping(method = RequestMethod.POST, value = "/login1")
-    public String login1(@ModelAttribute LoginForm loginForm){
-        if(donerService.login(loginForm.getName(),loginForm.getPassword())){
-            return "Main";
-        }
-        return "failedLogin";
-    }
+	@RequestMapping(method = RequestMethod.POST, value = "/login1")
+	public String login1(@ModelAttribute LoginForm loginForm) {
+		if (donerService.login(loginForm.getName(), loginForm.getPassword())) {
+			return "Main";
+		}
+		return "failedLogin";
+	}
 }

@@ -1,11 +1,8 @@
 package org.academiadecodigo.socialsaver.persistence.model.Entity;
 
 import org.academiadecodigo.socialsaver.persistence.model.Model;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
-import javax.persistence.*;
-import java.util.Date;
+import javax.persistence.MappedSuperclass;
 
 /**
  * A generic model entity to be used as a base for concrete types of models
@@ -13,57 +10,47 @@ import java.util.Date;
 @MappedSuperclass
 public abstract class AbstractEntity implements Model {
 
-    protected Integer id;
-    protected String name;
-    protected String email;
-    protected String password;
+	protected Integer id;
+	protected String name;
+	protected String email;
+	protected String password;
 
+	@Override
+	public String toString() {
+		return "AbstractEntity{" + "id=" + id + ", name='" + name + '\'' + ", email='" + email + '\'' + ", password='" + password + '\'' + '}';
+	}
 
-    @Override
-    public String toString() {
-        return "AbstractEntity{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
+	@Override
+	public Integer getId() {
+		return id;
+	}
 
+	@Override
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    @Override
-    public Integer getId() {
-        return id;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    @Override
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-
-
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }

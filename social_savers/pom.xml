@@ -1,7 +1,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.academiadecodigo.socialsaver</groupId>
-    <artifactId>socialsaver</artifactId>
+    <artifactId>radar</artifactId>
     <packaging>war</packaging>
     <version>0.0.1</version>
 
@@ -113,8 +113,8 @@
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
                     <server>tomcat</server>
-                    <username>monica</username>
-                    <password>monica</password>
+                    <username>both</username>
+                    <password>admin</password>
                     <path>/sss</path>
                 </configuration>
             </plugin>

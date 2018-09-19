@@ -5,17 +5,18 @@ package org.academiadecodigo.socialsaver.persistence.model;
  */
 public interface Model {
 
-    /**
-     * Gets the model id
-     *
-     * @return the model id
-     */
-    Integer getId();
+	/**
+	 * Gets the model id
+	 *
+	 * @return the model id
+	 */
+	Integer getId();
 
-    /**
-     * Sets the model id
-     *
-     * @param id the id to set
-     */
-    void setId(Integer id);
+	/**
+	 * Sets the model id
+	 *
+	 * @param id
+	 * 		the id to set
+	 */
+	void setId(Integer id);
 }
